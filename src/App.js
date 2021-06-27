@@ -5,12 +5,12 @@ import AppRouter from "./components/AppRouter";
 import React from "react";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-        <AppRouter />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Navbar/>
+            <AppRouter/>
+        </BrowserRouter>
+    );
 }
 
 export default App;

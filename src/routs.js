@@ -4,14 +4,14 @@ import Chat from "./components/Chat";
 
 export const publicRouts = [
     {
-        url: LOGIN_ROUTER,
+        path: LOGIN_ROUTER,
         component: Login
     }
 ]
 
 export const privateRouts = [
     {
-        url: CHAT_ROUTER,
+        path: CHAT_ROUTER,
         component: Chat
     }
 ]
