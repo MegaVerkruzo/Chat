@@ -1,5 +1,5 @@
 import {CHAT_ROUTER, LOGIN_ROUTER} from "./utils/consts";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Chat from "./components/Chat";
 
 export const publicRouts = [

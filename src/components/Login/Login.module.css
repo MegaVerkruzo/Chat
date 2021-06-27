@@ -1,0 +1,6 @@
+.menu {
+    display: grid;
+    height: 95%;
+    justify-content: center;
+    align-items: center;
+}

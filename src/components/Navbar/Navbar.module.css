@@ -1,0 +1,4 @@
+.navbar__items {
+    display: grid;
+    justify-content: flex-end;
+}

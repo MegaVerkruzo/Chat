@@ -1,8 +1,9 @@
 import React from 'react';
+import classes from './Login.module.css';
 
 const Login = () => {
     return (
-        <div>
+        <div className={classes.menu}>
             Login
         </div>
     )
