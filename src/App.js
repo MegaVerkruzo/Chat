@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar";
+import {BrowserRouter} from "react-router-dom";
+import AppRouter from "./components/AppRouter";
+import React from "react";
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-    </div>
+        <AppRouter />
+    </BrowserRouter>
   );
 }
 
