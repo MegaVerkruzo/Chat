@@ -9,8 +9,8 @@ const Navbar = () => {
 
     return (
         <div>
-            <AppBar color="secondary" position="static">
-                <Toolbar className={classes.navbar__items}>
+            <AppBar className={classes.navbar} color="secondary" position="static">
+                <Toolbar variant="dense" className={classes.navbar__items}>
                     {user
                         ?
                         (<NavLink to={LOGIN_ROUTER}>
