@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {AppBar, Button, Toolbar} from "@material-ui/core";
 import classes from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import {CHAT_ROUTER, LOGIN_ROUTER} from "../../utils/consts";
+import {Context} from "../../index";
+import {useAuthState} from "react-firebase-hooks/auth";
 
 const Navbar = () => {
     let user = true;
@@ -18,7 +20,7 @@ const Navbar = () => {
                         </NavLink>)
                         :
                         (<NavLink to={CHAT_ROUTER}>
-                            <Button>Выйти</Button>
+                            <Button onClick={() => auth.signOut()}>Выйти</Button>
                         </NavLink>)}
                 </Toolbar>
             </AppBar>

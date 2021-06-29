@@ -17,15 +17,19 @@ firebase.initializeApp({
     measurementId: "G-SEYJDVPD15"
 });
 
-const Context = createContext(null);
+export const Context = createContext(null);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Context.Provider value={{
+      firebase,
+      auth,
+      firestore
+  }}>
     <App />
-  </React.StrictMode>,
+  </Context.Provider>,
   document.getElementById('root')
 );
 
