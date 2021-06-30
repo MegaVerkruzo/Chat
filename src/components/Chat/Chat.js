@@ -4,21 +4,30 @@ import {Context} from "../../index";
 import {useAuthState} from "react-firebase-hooks/auth";
 import {Button, TextField} from "@material-ui/core";
 import {useCollectionData} from "react-firebase-hooks/firestore";
+import firebase from 'firebase';
+import Loader from "../Loader/Loader";
 
 const Chat = () => {
     const {auth, firestore} = useContext(Context);
     const [user] = useAuthState(auth);
     const [value, setValue] = useState('');
     const [messages, loading] = useCollectionData(
-        firestore.collection('messages').orderedBy('uid')
+        firestore.collection('messages').orderBy('createdAt')
     );
 
     const sendMessage = async () => {
         firestore.collection('messages').add({
-            id: user.uid,
-
+            uid: user.uid,
+            photoURL: user.photoURL,
+            displayName: user.displayName,
+            text: value,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
         })
         setValue('');
+    }
+
+    if (loading) {
+        return <Loader />
     }
 
     return (
