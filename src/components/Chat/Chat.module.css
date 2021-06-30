@@ -13,6 +13,8 @@
     width: 90%;
     height: 70%;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
 
 .page__input {

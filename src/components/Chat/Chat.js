@@ -5,7 +5,8 @@ import {useAuthState} from "react-firebase-hooks/auth";
 import {Button, TextField} from "@material-ui/core";
 import {useCollectionData} from "react-firebase-hooks/firestore";
 import firebase from 'firebase';
-import Loader from "../Loader/Loader";
+import Loader from "../Loader/Loader"
+import Message from "./Message/Message";
 
 const Chat = () => {
     const {auth, firestore} = useContext(Context);
@@ -15,6 +16,8 @@ const Chat = () => {
         firestore.collection('messages').orderBy('createdAt')
     );
 
+    const translated_messages = messages.map(el => <Message uid={el.uid} text={el.text}/>);
+
     const sendMessage = async () => {
         firestore.collection('messages').add({
             uid: user.uid,
@@ -22,7 +25,7 @@ const Chat = () => {
             displayName: user.displayName,
             text: value,
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        })
+        });
         setValue('');
     }
 
@@ -33,7 +36,7 @@ const Chat = () => {
     return (
         <div className={classes.page}>
             <div className={classes.page__messages}>
-
+                { translated_messages }
             </div>
             <div className={classes.page__input}>
                 <TextField
