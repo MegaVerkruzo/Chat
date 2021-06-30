@@ -1,0 +1,25 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
+}
+
+.page__messages {
+    margin: 0 auto;
+    width: 90%;
+    height: 70%;
+    border: 1px solid black;
+}
+
+.page__input {
+    width: 70%;
+    margin: 0 50px;
+}
+
+.page__button {
+    margin: 0 50px;
+}
