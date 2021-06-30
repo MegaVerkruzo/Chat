@@ -20,7 +20,7 @@ const Navbar = () => {
                         </NavLink>)
                         :
                         (<NavLink to={CHAT_ROUTER}>
-                            <Button onClick={() => auth.signOut()}>Выйти</Button>
+                            <Button>Выйти</Button>
                         </NavLink>)}
                 </Toolbar>
             </AppBar>
