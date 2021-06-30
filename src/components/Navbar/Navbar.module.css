@@ -2,3 +2,7 @@
     display: grid;
     justify-content: flex-end;
 }
+
+.navbar__items_button {
+    text-decoration: none;
+}

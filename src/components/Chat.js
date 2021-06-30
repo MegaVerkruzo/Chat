@@ -1,9 +1,10 @@
 import React from 'react';
+import Loader from "./Loader/Loader";
 
 const Chat = () => {
     return (
         <div>
-            Chat
+            <Loader />
         </div>
     )
 }
