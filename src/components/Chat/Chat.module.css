@@ -1,16 +1,17 @@
 .page {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-end;
     margin: 0 auto;
     width: 80%;
-    height: 90vh;
+    min-height: 1080px;
 }
 
 .page__messages {
-    margin: 0 auto;
-    width: 90%;
+    padding: 0 0 20px;
+    margin: 50px auto;
+    width: 100%;
     height: 70%;
     border: 1px solid black;
     display: flex;
@@ -18,10 +19,10 @@
 }
 
 .page__input {
-    width: 70%;
-    margin: 0 50px;
+    padding-top: 50px;
+    width: 100%;
 }
 
 .page__button {
-    margin: 0 50px;
+    margin: 20px 0;
 }

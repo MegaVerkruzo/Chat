@@ -1,11 +1,30 @@
 .message {
-    margin: 5px;
+    margin: 20px 30px 0;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    max-width: 60%;
 }
 
 .myMessage {
-
+    align-self: flex-end;
 }
 
 .notMineMessage {
+    align-self: flex-start;
+}
 
+.message__image {
+    padding: 5px;
+    margin: 0;
+}
+
+.message__image_item {
+    width: 100%;
+    border-radius: 40px;
+}
+
+.message__data_nickname {
+    color: blue;
+    margin: 5px;
 }

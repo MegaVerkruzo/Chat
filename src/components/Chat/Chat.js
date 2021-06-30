@@ -16,7 +16,11 @@ const Chat = () => {
         firestore.collection('messages').orderBy('createdAt')
     );
 
-    const translated_messages = messages.map(el => <Message uid={el.uid} text={el.text}/>);
+    if (loading) {
+        return <Loader />
+    }
+
+    const translated_messages = messages.map(el => <Message uid={el.uid} text={el.text} photoURL={el.photoURL} displayName={el.displayName}/>);
 
     const sendMessage = async () => {
         firestore.collection('messages').add({
@@ -27,10 +31,6 @@ const Chat = () => {
             createdAt: firebase.firestore.FieldValue.serverTimestamp()
         });
         setValue('');
-    }
-
-    if (loading) {
-        return <Loader />
     }
 
     return (
