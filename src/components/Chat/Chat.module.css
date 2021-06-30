@@ -5,21 +5,21 @@
     align-items: flex-end;
     margin: 0 auto;
     width: 80%;
-    min-height: 1080px;
 }
 
 .page__messages {
+    overflow: auto;
     padding: 0 0 20px;
     margin: 50px auto;
     width: 100%;
-    height: 70%;
+    height: 500px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
 }
 
 .page__input {
-    padding-top: 50px;
+    padding-top: 20px;
     width: 100%;
 }
 

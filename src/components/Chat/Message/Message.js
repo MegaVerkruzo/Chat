@@ -22,7 +22,7 @@ const Message = (props) => {
                 <div className={classes.message__data_nickname}>
                     { props.displayName }
                 </div>
-                <div>
+                <div className={classes.message__data_text}>
                     { props.text }
                 </div>
             </div>

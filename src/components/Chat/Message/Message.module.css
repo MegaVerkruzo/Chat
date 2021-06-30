@@ -1,8 +1,8 @@
 .message {
     margin: 20px 30px 0;
     border: 1px solid black;
-    display: grid;
-    grid-template-columns: 60px 1fr;
+    display: flex;
+    justify-content: flex-start;
     max-width: 60%;
 }
 
@@ -17,14 +17,31 @@
 .message__image {
     padding: 5px;
     margin: 0;
+    width: 60px;
 }
 
+
 .message__image_item {
-    width: 100%;
+    width: 60px;
     border-radius: 40px;
 }
 
+.message__data {
+    display: block;
+    padding-bottom: 5px;
+    min-width: 65%;
+}
+
+
 .message__data_nickname {
     color: blue;
-    margin: 5px;
+    margin: 5px 5px 5px 0;
+}
+
+.message__data_text {
+    display: inline;
+    width: 100%;
+    margin: 0 5px 0 0;
+    word-wrap: break-word;
+
 }
